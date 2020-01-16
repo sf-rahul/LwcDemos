@@ -1,22 +1,22 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
             "c/customNavigationDemo": [
-                "Datatable/lwc/customNavigationDemo/customNavigationDemo.js"
+                "customNavigationDemo/customNavigationDemo.js"
             ],
             "c/customNavigation": [
-                "Datatable/lwc/customNavigation/customNavigation.js"
+                "customNavigation/customNavigation.js"
             ],
             "c/customDatatable": [
-                "Datatable/lwc/customDatatable/customDatatable.js"
+                "customDatatable/customDatatable.js"
             ]
-        },
-        "experimentalDecorators": true
+        }
     },
     "include": [
         "**/*",
-        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+        "../../../../../../.sfdx/typings/lwc/**/*.d.ts"
     ],
     "typeAcquisition": {
         "include": [

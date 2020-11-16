@@ -1,0 +1,36 @@
+h1 {
+    color: rgb(0, 112, 210);
+}
+p {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    color: rgb(62, 62, 60);
+}
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.customborder{
+   border-top: 1px soild #eeee;
+   
+}
+
+.customlabel{
+    overflow-wrap: break-word;
+    color: rgb(62, 62, 60);
+    font-size: 0.75rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    margin-bottom: 0.125rem;
+    text-align:left;
+}
+
+.demo-only{
+    margin-top:6px
+}
+
+
+.sep{
+   border: 1px thin solid rgb(221, 219, 218)
+}

@@ -7,6 +7,7 @@ const columns = [
           rowid:{fieldName:'Id'},
           label:{fieldName:'Name'},
         }},
+    
     { label: 'Website', fieldName: 'Website', type: 'url' },
     { label: 'Phone', fieldName: 'Phone', type: 'phone' },
    

@@ -2,14 +2,14 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "c/customNavigationDemo": [
-                "Datatable/lwc/customNavigationDemo/customNavigationDemo.js"
+            "c/realTimeChat": [
+                "realTimeChat/realTimeChat.js"
             ],
-            "c/customNavigation": [
-                "Datatable/lwc/customNavigation/customNavigation.js"
+            "c/shortSoqlEditor": [
+                "shortSoqlEditor/shortSoqlEditor.js"
             ],
-            "c/customDatatable": [
-                "Datatable/lwc/customDatatable/customDatatable.js"
+            "c/detailScreen": [
+                "detailScreen/detailScreen.js"
             ]
         },
         "experimentalDecorators": true
@@ -21,6 +21,11 @@
     "typeAcquisition": {
         "include": [
             "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
         ]
     }
 }

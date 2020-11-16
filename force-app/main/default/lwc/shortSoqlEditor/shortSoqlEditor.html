@@ -1,0 +1,14 @@
+<template>
+
+<lightning-card>
+    <h1>Short Soql Editor</h1>
+
+    <lightning-textarea value = '' onchange={getSoqlText} >  </lightning-textarea>
+    <lightning-button onclick={handleInput}  label='Execute'> Execute </lightning-button>
+
+    <br/>
+    <h1> {result} </h1>
+    
+</lightning-card>
+
+</template>

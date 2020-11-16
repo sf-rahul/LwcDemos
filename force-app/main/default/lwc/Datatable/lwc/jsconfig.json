@@ -3,14 +3,14 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
-            "c/customNavigationDemo": [
-                "customNavigationDemo/customNavigationDemo.js"
+            "c/realTimeChat": [
+                "../../realTimeChat/realTimeChat.js"
             ],
-            "c/customNavigation": [
-                "customNavigation/customNavigation.js"
+            "c/shortSoqlEditor": [
+                "../../shortSoqlEditor/shortSoqlEditor.js"
             ],
-            "c/customDatatable": [
-                "customDatatable/customDatatable.js"
+            "c/detailScreen": [
+                "../../detailScreen/detailScreen.js"
             ]
         }
     },
@@ -21,6 +21,11 @@
     "typeAcquisition": {
         "include": [
             "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
         ]
     }
 }

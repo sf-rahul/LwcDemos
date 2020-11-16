@@ -1,0 +1,77 @@
+<template>
+    <template if:true={isspin}>
+        <div class="exampleHolder">
+            <lightning-spinner size="small" ></lightning-spinner>
+        </div>
+    </template>
+    <lightning-card title ="Extract words from picture" style="text-align:center">
+        <div slot="footer">
+
+            <template if:true={imageUrl}>
+                <img  src={imageUrl} ></img>
+            </template>
+            <div class="slds-m-top_small">
+            <lightning-file-upload
+            label="Take picture"
+            name="fileUploader"
+            onuploadfinished={handleUploadFinishedOCr}
+            >
+        
+        </lightning-file-upload>
+    </div>
+
+     
+     
+      <div class="slds-m-around_medium">Account creted based on the extracted data:</div>
+      <div class="slds-m-around_medium">
+        
+        <c-custom-datatable
+           key-field="Id"
+           data={accdata}
+           columns={columns}>
+        </c-custom-datatable>
+
+      </div>
+      <!-- <button class="slds-button slds-button_outline-brand slds-m-top_small slds-button_stretch">Predict</button> --> 
+         <template if:true={hasResult}>
+        <div class="slds-m-around_medium">
+        <lightning-card title ="Result" style="text-align:center" class="slds-m-around_medium"> 
+
+              <div slot="footer">
+                <div class="slds-grid slds-wrap">
+
+                    <div  class="slds-col slds-size_6-of-12 slds-align_absolute-center" style="font-weight: bold;">
+                        <span>Name</span>
+                        </div>
+    
+                        
+                        <div  class="slds-col slds-size_6-of-12 slds-align_absolute-center" style="font-weight: bold;">
+                        <span>Chance</span>
+                        </div>
+                        <div  class="slds-col slds-size_12-of-12 sep "  >
+                             
+                        </div>
+                    <template for:each={predictions} for:item="predict" >
+                    <div key ={predict} class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <span>{predict.label}</span>
+                    </div>
+
+                    
+                    <div  key={predict} class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <span>{predict.probability}</span>
+                    </div>
+                    <div key ={predict} class="slds-col slds-size_12-of-12 sep "  >
+                         
+                    </div>
+                </template>
+                </div>
+ 
+              </div>
+
+        </lightning-card>
+    </div>
+    </template>
+
+        </div>
+    </lightning-card>
+</template>
